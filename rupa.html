@@ -1,11 +1,153 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        table,th,tr,td{
+            border: 1px solid black;
+            border-collapse: collapse;        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
 <body>
-    <p>rupa</p>
+
+    <table id="table1" style="width: 100%;">
+        <tr>
+            <th>Name</th>
+            <th>ID</th>
+            <th>Marks</th>
+        </tr>
+
+        <tr>
+            <td>Sakib</td>
+            <td>71034</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>Rakib</td>
+            <td>2316</td>
+            <td>72</td>
+        </tr>
+    </table> 
+    <br>
+
+    <!-- <button type="button" id="button1">Add CSS to Table</button> -->
 </body>
 </html>
+
+
+
+<script>
+    $('#button2').click(function(){
+      var name =  document.getElementById('name').value;
+      var mail =  document.getElementById('mail').value;
+      var sid =  document.getElementById('sid').value;
+
+      console.log(name+" "+mail+" "+sid);
+
+      $('#table1').append(
+        '<tr>'+
+            '<td>'+name+'</td>'+
+            '<td>'+mail+'</td>'+
+            '<td>'+sid+'</td>'+
+        '</tr>'
+      );
+    })
+
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table,th,tr,td{
+            border: 1px solid black;
+            border-collapse: collapse;        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <label for="">Name</label>
+    <input type="text" name="" id="name">
+    <br>
+    <label for="">ID</label>
+    <input type="text" id="ID">
+    <br>
+    <label for="">Marks</label>
+    <input type="text" id="Marks">
+    <br>
+    <button type="button" id="button2">Add</button>
+    <br> <br>
+
+    <table id="table1" style="width: 100%;">
+        <tr>
+            <th>Name</th>
+            <th>Mail</th>
+            <th>ID</th>
+        </tr>
+
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+    </table> 
+    <br>
+
+    <!-- <button type="button" id="button1">Add CSS to Table</button> -->
+</body>
+</html>
+
+
+
+<script>
+    $('#button2').click(function(){
+      var name =  document.getElementById('name').value;
+      var mail =  document.getElementById('mail').value;
+      var sid =  document.getElementById('sid').value;
+
+      console.log(name+" "+mail+" "+sid);
+
+      $('#table1').append(
+        '<tr>'+
+            '<td>'+name+'</td>'+
+            '<td>'+mail+'</td>'+
+            '<td>'+sid+'</td>'+
+        '</tr>'
+      );
+    })
+
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+

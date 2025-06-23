@@ -92,3 +92,9 @@ function closePopup() {
   $("#overlay").hide();
   editRow = null;
 }
+
+$("#overlay").click(closePopup);
+
+$(document).keydown(function (e) {
+  if (e.key === "Escape") closePopup();
+});

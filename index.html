@@ -8,26 +8,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
-    <h2>Student Record Management</h2>
-    <table id="studentTable">
-      <tr>
-        <th>Name</th>
-        <th>ID</th>
-        <th>Marks</th>
-      </tr>
-    </table>
+    <div class="container">
+      <h2>Student Record Management</h2>
 
-    <label>Add Student Record</label><br />
-    <input type="text" id="name" placeholder="Enter name" />
-    <input type="text" id="id" placeholder="Enter ID" />
-    <input type="text" id="marks" placeholder="Enter marks" />
-    <br />
-    <button type="button" id="btn-add">Add</button>
+      <table id="studentTable">
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <th>Marks</th>
+        </tr>
+      </table>
 
-    <br /><br />
-    <label>Modify Student Record</label><br />
-    <input type="text" id="mod-id" placeholder="Enter ID to modify" />
-    <button id="modifyBtn">Modify</button>
+      <label>Add Student Record</label><br />
+      <input type="text" id="name" placeholder="Enter name" />
+      <input type="text" id="id" placeholder="Enter ID" />
+      <input type="text" id="marks" placeholder="Enter marks" />
+      <br />
+      <button type="button" id="btn-add">Add</button>
+
+      <br /><br />
+      <label>Modify Student Record</label><br />
+      <input type="text" id="mod-id" placeholder="Enter ID to modify" />
+      <button id="modifyBtn">Modify</button>
+    </div>
 
     <div id="overlay"></div>
     <div id="popup">

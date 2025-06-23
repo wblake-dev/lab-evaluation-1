@@ -3,70 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Student Record</title>
-    <style>
-      table,
-      th,
-      td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        padding: 6px;
-      }
-      th {
-        background-color: #f2f2f2;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
-    <table id="studentTable" style="width: 100%">
-      <tr>
-        <th>Name</th>
-        <th>ID</th>
-        <th>Marks</th>
-      </tr>
-      <tr>
-        <td>John Doe</td>
-        <td>12345</td>
-        <td>85</td>
-      </tr>
-      <tr>
-        <td>Jane Smith</td>
-        <td>67890</td>
-        <td>90</td>
-      </tr>
-    </table>
-    <br />
-    <label>Name</label>
-    <input type="text" id="name" />
-    <br />
-    <label>ID</label>
-    <input type="text" id="id" />
-    <br />
-    <label>Marks</label>
-    <input type="text" id="marks" />
-    <br />
-    <button type="button" id="btn-add">Add</button>
+    <div class="container">
+      <h2>Student Record Management</h2>
 
-    <script>
-      $("#btn-add").click(function () {
-        var name = document.getElementById("name").value.trim();
-        var id = document.getElementById("id").value.trim();
-        var marks = document.getElementById("marks").value.trim();
+      <table id="studentTable">
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <th>Marks</th>
+        </tr>
+        <tr data-id="12345">
+          <td>John Doe</td>
+          <td>12345</td>
+          <td>85</td>
+        </tr>
+        <tr data-id="67890">
+          <td>Jane Smith</td>
+          <td>67890</td>
+          <td>90</td>
+        </tr>
+      </table>
 
-        if (name && id && marks) {
-          $("#studentTable").append(
-            "<tr><td>" + name + "</td><td>" + id + "</td><td>" + marks + "</td></tr>"
-          );
+      <label>Add Student Record</label><br />
+      <input type="text" id="name" placeholder="Enter name" />
+      <input type="text" id="id" placeholder="Enter ID" />
+      <input type="text" id="marks" placeholder="Enter marks" />
+      <br />
+      <button type="button" id="btn-add">Add</button>
 
-          // Clear input fields
-          document.getElementById("name").value = "";
-          document.getElementById("id").value = "";
-          document.getElementById("marks").value = "";
-        } else {
-          alert("Please fill out all fields.");
-        }
-      });
-    </script>
+      <br /><br />
+      <label>Modify Student Record</label><br />
+      <input type="text" id="mod-id" placeholder="Enter ID to modify" />
+      <button id="modifyBtn">Modify</button>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="popup">
+      <h4>Edit Record</h4>
+      <input type="text" id="popup-name" placeholder="Edit name" /><br />
+      <input
+        type="text"
+        id="popup-marks"
+        placeholder="Edit marks"
+      /><br /><br />
+      <button id="updateBtn">Update</button>
+      <button onclick="closePopup()">Cancel</button>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
